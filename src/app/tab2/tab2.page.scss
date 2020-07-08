@@ -1,0 +1,22 @@
+ion-content{
+    --background: #000000;
+}
+
+ion-button{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    height: 95%;
+}
+
+ion-col{
+    height: calc(55vh / 6); //view height
+}
+
+ion-label{
+    --ion-font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+.resultado{
+    font-size: 24px;
+}

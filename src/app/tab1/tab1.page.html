@@ -1,17 +1,48 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Calculadora</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-content [fullscreen]="true" color="dark">
+    <ion-card>
+      <ion-item color="medium">
+        <ion-label>1° Valor </ion-label>
+        <ion-input type="number" [(ngModel)]="valor1"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-card>
+      <ion-item color="medium">
+        <ion-label>2° Valor </ion-label>
+        <ion-input type="number" [(ngModel)]="valor2"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-button expand="block" (click)="somar()" color="tertiary">SOMAR</ion-button>
+    <div class="info ion-text-center">
+      <p>{{adicao}}</p>
+    </div>
+
+    <ion-button expand="block" (click)="dividir()" color="tertiary">DIVIDIR</ion-button>
+    <div class="info ion-text-center">
+      <p>{{divisao}}</p>
+    </div>
+
+    <ion-button expand="block" (click)="subtrair()" color="tertiary">SUBTRAIR</ion-button>
+    <div class="info ion-text-center">
+      <p>{{subtracao}}</p>
+    </div>
+
+    <ion-button expand="block" (click)="multiplicar()" color="tertiary">MULTIPLICAR</ion-button>
+    <div class="info ion-text-center">
+      <p>{{multiplicacao}}</p>
+    </div>
+
+    <br>
+    <ion-button expand="block" (click)="limpar()" color="danger">LIMPAR</ion-button>
+    <div class="info ion-text-center">
+      <p>{{limpa}}</p>
+    </div>
 </ion-content>
